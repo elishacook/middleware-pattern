@@ -1,0 +1,23 @@
+{
+  "name": "middleware-pattern",
+  "version": "0.1.0",
+  "description": "Use the middleware pattern in your javascript",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --recursive tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elishacook/middleware-pattern.git"
+  },
+  "author": "Elisha Fitch-Cook <elisha@cooper.com> (https://github.com/elishacook)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elishacook/middleware-pattern/issues"
+  },
+  "homepage": "https://github.com/elishacook/middleware-pattern",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3"
+  }
+}
