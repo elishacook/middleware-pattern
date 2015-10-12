@@ -147,4 +147,44 @@ describe('middleware-pattern', function ()
             done()
         })
     })
+    
+    it('can have a custom name for use()', function (done)
+    {
+        var foo = {}
+        middleware_pattern(foo, { use: 'add_a_thing' })
+        
+        foo.add_a_thing(function (params, next)
+        {
+            params.skidoo = 23
+            next()
+        })
+        
+        var params = {}
+        
+        foo.run_middleware([params], function ()
+        {
+            expect(params.skidoo).to.equal(23)
+            done()
+        })
+    })
+    
+    it('can have a custom name for run_middleware()', function (done)
+    {
+        var foo = {}
+        middleware_pattern(foo, { run: 'run_things' })
+        
+        foo.use(function (params, next)
+        {
+            params.skidoo = 23
+            next()
+        })
+        
+        var params = {}
+        
+        foo.run_things([params], function ()
+        {
+            expect(params.skidoo).to.equal(23)
+            done()
+        })
+    })
 })

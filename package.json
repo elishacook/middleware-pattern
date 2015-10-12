@@ -1,6 +1,6 @@
 {
   "name": "middleware-pattern",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Use the middleware pattern in your javascript",
   "main": "lib/index.js",
   "scripts": {
